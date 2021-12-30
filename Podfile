@@ -7,4 +7,5 @@ target 'SakuMemoSamples' do
 
   # Pods for SakuMemoSamples
 pod 'FloatingPanel'
+
 end
