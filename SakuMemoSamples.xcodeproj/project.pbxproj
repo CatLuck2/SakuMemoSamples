@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A25F62E72779203A005A9B17 /* HalfModalOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F62E62779203A005A9B17 /* HalfModalOverlayView.swift */; };
-		A25F62E927792062005A9B17 /* HalfModalIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F62E827792062005A9B17 /* HalfModalIndicatorView.swift */; };
-		A25F62EB277920C0005A9B17 /* HalfModalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F62EA277920C0005A9B17 /* HalfModalRepository.swift */; };
-		A25F62ED277920D8005A9B17 /* HalfModalDismissAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F62EC277920D8005A9B17 /* HalfModalDismissAnimation.swift */; };
-		A25F62EF277920E9005A9B17 /* HalfModalDismissInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25F62EE277920E9005A9B17 /* HalfModalDismissInteraction.swift */; };
 		A26A634E277914BD005F13B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A634D277914BD005F13B9 /* AppDelegate.swift */; };
 		A26A6350277914BD005F13B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A634F277914BD005F13B9 /* SceneDelegate.swift */; };
 		A26A6352277914BD005F13B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A6351277914BD005F13B9 /* ViewController.swift */; };
@@ -22,11 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A25F62E62779203A005A9B17 /* HalfModalOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalOverlayView.swift; sourceTree = "<group>"; };
-		A25F62E827792062005A9B17 /* HalfModalIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalIndicatorView.swift; sourceTree = "<group>"; };
-		A25F62EA277920C0005A9B17 /* HalfModalRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalRepository.swift; sourceTree = "<group>"; };
-		A25F62EC277920D8005A9B17 /* HalfModalDismissAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalDismissAnimation.swift; sourceTree = "<group>"; };
-		A25F62EE277920E9005A9B17 /* HalfModalDismissInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalDismissInteraction.swift; sourceTree = "<group>"; };
 		A26A634A277914BD005F13B9 /* SakuMemoSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SakuMemoSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26A634D277914BD005F13B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A26A634F277914BD005F13B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,11 +43,6 @@
 			isa = PBXGroup;
 			children = (
 				A26A6351277914BD005F13B9 /* ViewController.swift */,
-				A25F62E62779203A005A9B17 /* HalfModalOverlayView.swift */,
-				A25F62E827792062005A9B17 /* HalfModalIndicatorView.swift */,
-				A25F62EA277920C0005A9B17 /* HalfModalRepository.swift */,
-				A25F62EC277920D8005A9B17 /* HalfModalDismissAnimation.swift */,
-				A25F62EE277920E9005A9B17 /* HalfModalDismissInteraction.swift */,
 			);
 			path = DecorateText;
 			sourceTree = "<group>";
@@ -165,13 +150,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A26A6352277914BD005F13B9 /* ViewController.swift in Sources */,
-				A25F62EB277920C0005A9B17 /* HalfModalRepository.swift in Sources */,
-				A25F62E72779203A005A9B17 /* HalfModalOverlayView.swift in Sources */,
 				A26A634E277914BD005F13B9 /* AppDelegate.swift in Sources */,
-				A25F62E927792062005A9B17 /* HalfModalIndicatorView.swift in Sources */,
 				A26A6350277914BD005F13B9 /* SceneDelegate.swift in Sources */,
-				A25F62EF277920E9005A9B17 /* HalfModalDismissInteraction.swift in Sources */,
-				A25F62ED277920D8005A9B17 /* HalfModalDismissAnimation.swift in Sources */,
 				A26A6358277914BD005F13B9 /* SakuMemoSamples.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
