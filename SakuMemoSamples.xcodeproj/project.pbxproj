@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A20737E4277D6D0100050DF7 /* HalfModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20737E3277D6D0100050DF7 /* HalfModalViewController.swift */; };
 		A26A634E277914BD005F13B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A634D277914BD005F13B9 /* AppDelegate.swift */; };
 		A26A6350277914BD005F13B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A634F277914BD005F13B9 /* SceneDelegate.swift */; };
 		A26A6352277914BD005F13B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A6351277914BD005F13B9 /* ViewController.swift */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A20737E3277D6D0100050DF7 /* HalfModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HalfModalViewController.swift; sourceTree = "<group>"; };
 		A26A634A277914BD005F13B9 /* SakuMemoSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SakuMemoSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26A634D277914BD005F13B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A26A634F277914BD005F13B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +61,6 @@
 				A26A634D277914BD005F13B9 /* AppDelegate.swift */,
 				A26A634F277914BD005F13B9 /* SceneDelegate.swift */,
 				A26A6351277914BD005F13B9 /* ViewController.swift */,
-				A20737E3277D6D0100050DF7 /* HalfModalViewController.swift */,
 				A26A6353277914BD005F13B9 /* Main.storyboard */,
 				A26A6359277914BE005F13B9 /* Assets.xcassets */,
 				A26A635B277914BE005F13B9 /* LaunchScreen.storyboard */,
@@ -144,7 +141,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A20737E4277D6D0100050DF7 /* HalfModalViewController.swift in Sources */,
 				A26A6352277914BD005F13B9 /* ViewController.swift in Sources */,
 				A26A634E277914BD005F13B9 /* AppDelegate.swift in Sources */,
 				A26A6350277914BD005F13B9 /* SceneDelegate.swift in Sources */,
