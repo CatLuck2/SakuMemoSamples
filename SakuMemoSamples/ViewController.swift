@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import FloatingPanel
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let halfModalViewController = segue.destination
         if let halfModalVC = halfModalViewController.sheetPresentationController {
