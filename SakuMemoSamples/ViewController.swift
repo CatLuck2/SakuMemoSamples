@@ -14,7 +14,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fpc.delegate = self
     }
     
     @IBAction func presentHalfModalButton(_ sender: UIButton) {
