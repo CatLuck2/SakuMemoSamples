@@ -8,7 +8,7 @@
 import UIKit
 import FloatingPanel
 
-class ViewController: UIViewController, FloatingPanelControllerDelegate {
+class ViewController: UIViewController {
     
     private var fpc = FloatingPanelController()
 
@@ -20,6 +20,10 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     @IBAction func presentHalfModalButton(_ sender: UIButton) {
         guard let destinationVC = self.storyboard?.instantiateViewController(withIdentifier: "fpc") as? FloatingPanelViewController else { return }
         self.presentFloatingPanel(nextVC: destinationVC)
+    }
+    
+    @IBAction func CloseModalButton(_ sender: UIButton) {
+        fpc.removePanelFromParent(animated: true, completion: nil)
     }
     
     /// sheetPresentationControllerでハーフモーダルを表示
@@ -37,6 +41,7 @@ class ViewController: UIViewController, FloatingPanelControllerDelegate {
     /// FloatingPanelでハーフモーダルを表示
     func presentFloatingPanel(nextVC: UIViewController) {
         fpc.set(contentViewController: nextVC)
+        fpc.move(to: .half, animated: true, completion: nil)
         fpc.addPanel(toParent: self)
     }
 }
