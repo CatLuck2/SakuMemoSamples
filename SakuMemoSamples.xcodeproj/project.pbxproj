@@ -16,6 +16,7 @@
 		A26A635A277914BE005F13B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A26A6359277914BE005F13B9 /* Assets.xcassets */; };
 		A26A635D277914BE005F13B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26A635B277914BE005F13B9 /* LaunchScreen.storyboard */; };
 		A2DD24C8277DCEDC00E18200 /* FloatingPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DD24C7277DCEDC00E18200 /* FloatingPanelViewController.swift */; };
+		A2DD24CA277DE2B300E18200 /* AttributeStringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DD24C9277DE2B300E18200 /* AttributeStringProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		A26A635C277914BE005F13B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A26A635E277914BE005F13B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DD24C7277DCEDC00E18200 /* FloatingPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelViewController.swift; sourceTree = "<group>"; };
+		A2DD24C9277DE2B300E18200 /* AttributeStringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeStringProtocol.swift; sourceTree = "<group>"; };
 		A6C5015551FE6C1747F9ACA7 /* Pods_SakuMemoSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SakuMemoSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				A26A635E277914BE005F13B9 /* Info.plist */,
 				A26A6356277914BD005F13B9 /* SakuMemoSamples.xcdatamodeld */,
 				A2DD24C7277DCEDC00E18200 /* FloatingPanelViewController.swift */,
+				A2DD24C9277DE2B300E18200 /* AttributeStringProtocol.swift */,
 			);
 			path = SakuMemoSamples;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				A26A634E277914BD005F13B9 /* AppDelegate.swift in Sources */,
 				A26A6350277914BD005F13B9 /* SceneDelegate.swift in Sources */,
 				A26A6358277914BD005F13B9 /* SakuMemoSamples.xcdatamodeld in Sources */,
+				A2DD24CA277DE2B300E18200 /* AttributeStringProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
