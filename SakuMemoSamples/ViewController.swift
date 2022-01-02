@@ -54,6 +54,7 @@ extension ViewController: UITextViewDelegate {
         let location = textView.selectedRange.location
         let length = textView.selectedRange.length
         if length <= 0 {
+            selectedString.text?.removeAll()
             return
         } else {
             let strIndex = textView.text.startIndex
@@ -61,7 +62,7 @@ extension ViewController: UITextViewDelegate {
                       let endIndex = textView.text.index(strIndex, offsetBy: location+length-1, limitedBy: textView.text.endIndex) else {
                 return
             }
-            print(textView.text[startIndex...endIndex])
+            selectedString.text = String(textView.text[startIndex...endIndex])
         }
     }
 }
