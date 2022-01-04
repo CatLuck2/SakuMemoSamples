@@ -288,20 +288,24 @@
                                     <constraint firstAttribute="width" secondItem="Rpe-i6-Oe1" secondAttribute="height" multiplier="404:31" id="dai-fW-SHd"/>
                                 </constraints>
                             </stackView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ezv-33-7fH">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="テストテストテストテストテストテスト" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ezv-33-7fH">
                                 <rect key="frame" x="57" y="344.5" width="300" height="207"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ezv-33-7fH" secondAttribute="height" multiplier="100:69" id="5nq-TD-2Bf"/>
                                     <constraint firstAttribute="height" constant="207" id="eKz-7V-obd"/>
                                 </constraints>
-                                <string key="text">テストテストテスト
-
-テストテストテスト</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="879-vQ-8mk">
+                                <rect key="frame" x="63" y="602" width="289" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lgt-pp-vIP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -317,12 +321,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="label" destination="879-vQ-8mk" id="KtZ-cE-3FN"/>
                         <outlet property="textView" destination="ezv-33-7fH" id="3gk-T1-qU0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3p-m3-Yyy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1526" y="84"/>
+            <point key="canvasLocation" x="1524.6376811594205" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
