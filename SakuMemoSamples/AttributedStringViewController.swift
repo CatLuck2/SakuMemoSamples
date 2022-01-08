@@ -34,18 +34,32 @@ class AttributedStringViewController: UIViewController {
     }
     
     @IBAction func boldButton(_ sender: UIButton) {
-//        textView.font = UIFont.boldSystemFont(ofSize: textView.font!.pointSize)
-        let stm = textView.font?.stm
-        stm?.bold()
-        textView.font = stm?.build()
+        ///方法１
+        /** textView.font = UIFont.boldSystemFont(ofSize: textView.font!.pointSize) */
+ 
+        ///方法２
+        /** let stm = SymbolicTraitsModifer(font: textView.font!).bold()
+        textView.font = stm.build() */
+        
+        ///方法３
+        let stm = SymbolicTraitsModifer(font: textView.font!).bold()
+        let string = NSMutableAttributedString(string: textView.text)
+        string.addAttribute(.font, value: stm.build(), range: .init(location: 0, length: textView.text.count))
     }
     
     
     @IBAction func italicButton(_ sender: UIButton) {
-//        textView.font = UIFont.italicSystemFont(ofSize: textView.font!.pointSize)
-        let stm = textView.font?.stm
-        stm?.italic()
-        textView.font = stm?.build()
+        ///方法１
+        /** textView.font = UIFont.italicSystemFont(ofSize: textView.font!.pointSize) */
+        
+        ///方法２
+        /** let stm = SymbolicTraitsModifer(font: textView.font!).italic()
+        textView.font = stm.build() */
+        
+        ///方法３
+        let string = NSMutableAttributedString(string: textView.text)
+        let stm = SymbolicTraitsModifer(font: textView.font!).italic()
+        string.addAttribute(.font, value: stm.build(), range: .init(location: 0, length: textView.text.count))
     }
     
     @IBAction func underlineButton(_ sender: UIButton) {
@@ -97,37 +111,6 @@ final class SymbolicTraitsModifer {
         } else {
             return font
         }
-    }
-}
-
-extension UIFont {
-    
-    var stm: SymbolicTraitsModifer {
-        SymbolicTraitsModifer(font: self)
-    }
-
-    func withTraits(_ traits: UIFontDescriptor.SymbolicTraits) -> UIFont {
-
-        // create a new font descriptor with the given traits
-        guard let fd = fontDescriptor.withSymbolicTraits(traits) else {
-            // the given traits couldn't be applied, return self
-            return self
-        }
-
-        // return a new font with the created font descriptor
-        return UIFont(descriptor: fd, size: pointSize)
-    }
-
-    func italics() -> UIFont {
-        return withTraits(.traitItalic)
-    }
-
-    func bold() -> UIFont {
-        return withTraits(.traitBold)
-    }
-
-    func boldItalics() -> UIFont {
-        return withTraits([ .traitBold, .traitItalic ])
     }
 }
 
