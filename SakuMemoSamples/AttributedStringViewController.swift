@@ -21,16 +21,20 @@ class AttributedStringViewController: UIViewController {
     }
     
     @IBAction func headlineFirstButton(_ sender: UIButton) {
+        textView.attributedText = NSMutableAttributedString(string: textView.text, attributes: [.font: UIFont.preferredFont(forTextStyle: .title1)])
     }
     
     @IBAction func headlineSecondButton(_ sender: UIButton) {
+        textView.attributedText = NSMutableAttributedString(string: textView.text, attributes: [.font: UIFont.preferredFont(forTextStyle: .title2)])
     }
     
     
     @IBAction func headlineThirdButton(_ sender: UIButton) {
+        textView.attributedText = NSMutableAttributedString(string: textView.text, attributes: [.font: UIFont.preferredFont(forTextStyle: .title3)])
     }
     
     @IBAction func plainTextButton(_ sender: UIButton) {
+        textView.attributedText = NSMutableAttributedString(string: textView.text, attributes: [.font: UIFont.preferredFont(forTextStyle: .body)])
     }
     
     @IBAction func boldButton(_ sender: UIButton) {
@@ -63,20 +67,20 @@ class AttributedStringViewController: UIViewController {
     }
     
     @IBAction func underlineButton(_ sender: UIButton) {
+        ///方法１
+        textView.attributedText = NSMutableAttributedString(string: textView.text, attributes: [.underlineStyle : 1])
     }
     
     @IBAction func strikeThroughButton(_ sender: UIButton) {
-    }
-    
-    @IBAction func bulletedListButton(_ sender: UIButton) {
+        let string = NSMutableAttributedString(string: textView.text)
         
+        ///方法１
+        string.addAttribute(.strikethroughStyle, value: 1, range: NSMakeRange(0, 10))
+        textView.attributedText = string
     }
     
-    @IBAction func numberedListButton(_ sender: UIButton) {
-        
-    }
-    
-    @IBAction func checkListButton(_ sender: UIButton) {
+    @IBAction func colorButton(_ sender: UIButton) {
+        textView.attributedText = NSMutableAttributedString(string: textView.text, attributes: [.foregroundColor : UIColor.red])
     }
     
     func getCurrentLine() -> String {
