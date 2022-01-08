@@ -17,6 +17,7 @@
 		A26A635D277914BE005F13B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A26A635B277914BE005F13B9 /* LaunchScreen.storyboard */; };
 		A2DD24CA277DE2B300E18200 /* AttributeStringProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DD24C9277DE2B300E18200 /* AttributeStringProtocol.swift */; };
 		A2DF984A27816C3400FB11D2 /* AttributedStringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2DF984927816C3400FB11D2 /* AttributedStringViewController.swift */; };
+		A2F535F62789A22C000A8DC5 /* FloatingPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F535F52789A22C000A8DC5 /* FloatingPanelViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		A26A635E277914BE005F13B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2DD24C9277DE2B300E18200 /* AttributeStringProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributeStringProtocol.swift; sourceTree = "<group>"; };
 		A2DF984927816C3400FB11D2 /* AttributedStringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringViewController.swift; sourceTree = "<group>"; };
+		A2F535F52789A22C000A8DC5 /* FloatingPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelViewController.swift; sourceTree = "<group>"; };
 		A6C5015551FE6C1747F9ACA7 /* Pods_SakuMemoSamples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SakuMemoSamples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				A26A6351277914BD005F13B9 /* ViewController.swift */,
 				A26A6353277914BD005F13B9 /* Main.storyboard */,
 				A2DF984927816C3400FB11D2 /* AttributedStringViewController.swift */,
+				A2F535F52789A22C000A8DC5 /* FloatingPanelViewController.swift */,
 				A26A6359277914BE005F13B9 /* Assets.xcassets */,
 				A26A635B277914BE005F13B9 /* LaunchScreen.storyboard */,
 				A26A635E277914BE005F13B9 /* Info.plist */,
@@ -221,6 +224,7 @@
 				A26A6350277914BD005F13B9 /* SceneDelegate.swift in Sources */,
 				A26A6358277914BD005F13B9 /* SakuMemoSamples.xcdatamodeld in Sources */,
 				A2DD24CA277DE2B300E18200 /* AttributeStringProtocol.swift in Sources */,
+				A2F535F62789A22C000A8DC5 /* FloatingPanelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
