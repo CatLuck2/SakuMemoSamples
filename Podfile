@@ -6,6 +6,13 @@ target 'SakuMemoSamples' do
   use_frameworks!
 
   # Pods for SakuMemoSamples
-pod 'FloatingPanel'
+  pod 'FloatingPanel'
+end
 
+target 'WidgetDemoExtensionExtension' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for WidgetDemoExtensionExtension
+  pod 'FloatingPanel'
 end
