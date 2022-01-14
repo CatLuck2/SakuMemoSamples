@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol MyTextViewDelegate {
+    func setStringToTextView(string: NSMutableAttributedString)
+}
+
 class AttributedStringViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var label: UILabel!
@@ -17,6 +21,7 @@ class AttributedStringViewController: UIViewController {
     
     override func viewDidLoad() {
         textView.delegate = self
+        AttributedStringSingleton.shared.setDelegate(delegate: self)
     }
     
     @IBAction func headlineFirstButton(_ sender: UIButton) {
@@ -48,6 +53,7 @@ class AttributedStringViewController: UIViewController {
         let stm = SymbolicTraitsModifer(font: textView.font!).bold()
         let string = NSMutableAttributedString(string: textView.text)
         string.addAttribute(.font, value: stm.build(), range: .init(location: 0, length: textView.text.count))
+        textView.attributedText = string
     }
     
     
@@ -60,9 +66,13 @@ class AttributedStringViewController: UIViewController {
         textView.font = stm.build() */
         
         ///方法３
-        let string = NSMutableAttributedString(string: textView.text)
-        let stm = SymbolicTraitsModifer(font: textView.font!).italic()
-        string.addAttribute(.font, value: stm.build(), range: .init(location: 0, length: textView.text.count))
+//        let string = NSMutableAttributedString(string: textView.text)
+//        let stm = SymbolicTraitsModifer(font: textView.font!).italic()
+//        string.addAttribute(.font, value: stm.build(), range: .init(location: 0, length: textView.text.count))
+        
+        print(        textView.attributedText.enumerateAttribute(.font, in: NSRange(location: 1, length: 4)) { result, resultRange, _ in
+            print(result)
+            print(resultRange)})
     }
     
     @IBAction func underlineButton(_ sender: UIButton) {
@@ -89,41 +99,39 @@ class AttributedStringViewController: UIViewController {
     }
 }
 
-final class SymbolicTraitsModifer {
-    private let font: UIFont
-    private var traits: UIFontDescriptor.SymbolicTraits = []
-
-    init(font: UIFont) {
-        self.font = font
-        traits = font.fontDescriptor.symbolicTraits
-    }
-
-    func bold() -> SymbolicTraitsModifer {
-        traits.insert(.traitBold)
-        return self
-    }
-
-    func italic() -> SymbolicTraitsModifer {
-        traits.insert(.traitItalic)
-        return self
-    }
-
-    func build() -> UIFont {
-        if let descriptor = font.fontDescriptor.withSymbolicTraits(traits) {
-            return UIFont(descriptor: descriptor, size: font.pointSize)
-        } else {
-            return font
-        }
-    }
-}
+//final class SymbolicTraitsModifer {
+//    private let font: UIFont
+//    private var traits: UIFontDescriptor.SymbolicTraits = []
+//
+//    init(font: UIFont) {
+//        self.font = font
+//        traits = font.fontDescriptor.symbolicTraits
+//    }
+//
+//    func bold() -> SymbolicTraitsModifer {
+//        traits.insert(.traitBold)
+//        return self
+//    }
+//
+//    func italic() -> SymbolicTraitsModifer {
+//        traits.insert(.traitItalic)
+//        return self
+//    }
+//
+//    func build() -> UIFont {
+//        if let descriptor = font.fontDescriptor.withSymbolicTraits(traits) {
+//            return UIFont(descriptor: descriptor, size: font.pointSize)
+//        } else {
+//            return font
+//        }
+//    }
+//}
 
 extension AttributedStringViewController: UITextViewDelegate {
-    
     func textViewDidChangeSelection(_ textView: UITextView) {
         let location = textView.selectedRange.location
         let length = textView.selectedRange.length
         if length <= 0 {
-//            selectedString.text?.removeAll()
             return
         } else {
             let strIndex = textView.text.startIndex
@@ -131,11 +139,15 @@ extension AttributedStringViewController: UITextViewDelegate {
                       let endIndex = textView.text.index(strIndex, offsetBy: location+length-1, limitedBy: textView.text.endIndex) else {
                 return
             }
-            AttributedStringSingleton.shared.getSelectedString()
-//            選択したテキスト
-//            String(textView.text[startIndex...endIndex])
-//            selectedString.text = String(textView.text[startIndex...endIndex])
+            let attributeString = textView.attributedText!
+            AttributedStringSingleton.shared.setString(text: NSMutableAttributedString(attributedString: attributeString))
+            AttributedStringSingleton.shared.setIndex(firstIndex: startIndex, LastIndex: endIndex)
         }
     }
-    
+}
+
+extension AttributedStringViewController: MyTextViewDelegate {
+    func setStringToTextView(string: NSMutableAttributedString) {
+        textView.attributedText = string
+    }
 }

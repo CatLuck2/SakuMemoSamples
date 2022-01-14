@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VlM-iN-PY1">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -78,6 +78,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="75.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="見出し1"/>
+                                        <connections>
+                                            <action selector="headline:" destination="i39-ZG-TjD" eventType="touchUpInside" id="0gC-Ux-ea2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jG2-c3-Qjh">
                                         <rect key="frame" x="83.5" y="0.0" width="75.5" height="31"/>
@@ -93,6 +96,9 @@
                                         <rect key="frame" x="250.5" y="0.0" width="75.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="本文"/>
+                                        <connections>
+                                            <action selector="plainText:" destination="i39-ZG-TjD" eventType="touchUpInside" id="gZa-QV-pTj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -103,6 +109,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="53" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="B"/>
+                                        <connections>
+                                            <action selector="bold:" destination="i39-ZG-TjD" eventType="touchUpInside" id="Xbc-nf-wv0"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOJ-AS-1mw">
                                         <rect key="frame" x="79" y="0.0" width="53" height="31"/>
@@ -113,6 +122,9 @@
                                         <rect key="frame" x="158" y="0.0" width="53" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="下線"/>
+                                        <connections>
+                                            <action selector="underline:" destination="i39-ZG-TjD" eventType="touchUpInside" id="eHs-3S-NDj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pui-oQ-9f3">
                                         <rect key="frame" x="237" y="0.0" width="53" height="31"/>
