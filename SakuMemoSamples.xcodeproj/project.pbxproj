@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		2E4BF22258E88082661D77BA /* Pods_SakuMemoSamples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6C5015551FE6C1747F9ACA7 /* Pods_SakuMemoSamples.framework */; };
 		4BE5B1F4353CDB53B4EE4DC1 /* Pods_WidgetDemoExtensionExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF520F9D2204D79B5EA00D69 /* Pods_WidgetDemoExtensionExtension.framework */; };
-		A21D3CFA27915C5F0026460A /* AttributedStringSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21D3CF927915C5F0026460A /* AttributedStringSingleton.swift */; };
+		A237FC7F2791629A0029C0FE /* AttributedStringSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237FC7E2791629A0029C0FE /* AttributedStringSingleton.swift */; };
+		A237FC80279163E80029C0FE /* AttributedStringSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237FC7E2791629A0029C0FE /* AttributedStringSingleton.swift */; };
 		A26A634E277914BD005F13B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A634D277914BD005F13B9 /* AppDelegate.swift */; };
 		A26A6350277914BD005F13B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A634F277914BD005F13B9 /* SceneDelegate.swift */; };
 		A26A6352277914BD005F13B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A26A6351277914BD005F13B9 /* ViewController.swift */; };
@@ -63,7 +64,7 @@
 		09929BA8E445AF86F0C1D73C /* Pods-WidgetDemoExtensionExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetDemoExtensionExtension.release.xcconfig"; path = "Target Support Files/Pods-WidgetDemoExtensionExtension/Pods-WidgetDemoExtensionExtension.release.xcconfig"; sourceTree = "<group>"; };
 		0A467C51D9DAAA8EB84635E7 /* Pods-SakuMemoSamples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SakuMemoSamples.release.xcconfig"; path = "Target Support Files/Pods-SakuMemoSamples/Pods-SakuMemoSamples.release.xcconfig"; sourceTree = "<group>"; };
 		2FBB45EE0680938D62245668 /* Pods-WidgetDemoExtensionExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WidgetDemoExtensionExtension.debug.xcconfig"; path = "Target Support Files/Pods-WidgetDemoExtensionExtension/Pods-WidgetDemoExtensionExtension.debug.xcconfig"; sourceTree = "<group>"; };
-		A21D3CF927915C5F0026460A /* AttributedStringSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringSingleton.swift; sourceTree = "<group>"; };
+		A237FC7E2791629A0029C0FE /* AttributedStringSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedStringSingleton.swift; sourceTree = "<group>"; };
 		A26A634A277914BD005F13B9 /* SakuMemoSamples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SakuMemoSamples.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A26A634D277914BD005F13B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A26A634F277914BD005F13B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,12 +150,12 @@
 			path = FloatingPanel;
 			sourceTree = "<group>";
 		};
-		A21D3CF827915C3C0026460A /* AttributedStringSIngleton */ = {
+		A237FC81279163FC0029C0FE /* AttributedStringSingleton */ = {
 			isa = PBXGroup;
 			children = (
-				A21D3CF927915C5F0026460A /* AttributedStringSingleton.swift */,
+				A237FC7E2791629A0029C0FE /* AttributedStringSingleton.swift */,
 			);
-			path = AttributedStringSIngleton;
+			path = AttributedStringSingleton;
 			sourceTree = "<group>";
 		};
 		A26A6341277914BD005F13B9 = {
@@ -186,7 +187,7 @@
 				A26A6353277914BD005F13B9 /* Main.storyboard */,
 				A21D3CF627910F570026460A /* FloatingPanel */,
 				A21D3CF527910F420026460A /* AttributedString */,
-				A21D3CF827915C3C0026460A /* AttributedStringSIngleton */,
+				A237FC81279163FC0029C0FE /* AttributedStringSingleton */,
 				A26A6359277914BE005F13B9 /* Assets.xcassets */,
 				A26A635B277914BE005F13B9 /* LaunchScreen.storyboard */,
 				A26A635E277914BE005F13B9 /* Info.plist */,
@@ -380,7 +381,7 @@
 				A2DF984A27816C3400FB11D2 /* AttributedStringViewController.swift in Sources */,
 				A2F535F8278A8171000A8DC5 /* WidgetView.swift in Sources */,
 				A2F5360A278A81FB000A8DC5 /* WidgetDemoExtension.intentdefinition in Sources */,
-				A21D3CFA27915C5F0026460A /* AttributedStringSingleton.swift in Sources */,
+				A237FC7F2791629A0029C0FE /* AttributedStringSingleton.swift in Sources */,
 				A26A634E277914BD005F13B9 /* AppDelegate.swift in Sources */,
 				A26A6350277914BD005F13B9 /* SceneDelegate.swift in Sources */,
 				A26A6358277914BD005F13B9 /* SakuMemoSamples.xcdatamodeld in Sources */,
@@ -397,6 +398,7 @@
 				A2F53634278A8CCF000A8DC5 /* ViewController.swift in Sources */,
 				A2F53635278A8CCF000A8DC5 /* FloatingPanelViewController.swift in Sources */,
 				A2F53609278A81FB000A8DC5 /* WidgetDemoExtension.intentdefinition in Sources */,
+				A237FC80279163E80029C0FE /* AttributedStringSingleton.swift in Sources */,
 				A2F53633278A8CCF000A8DC5 /* AttributedStringViewController.swift in Sources */,
 				A2F53636278A8CCF000A8DC5 /* WidgetView.swift in Sources */,
 			);

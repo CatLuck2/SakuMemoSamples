@@ -8,7 +8,6 @@
 import UIKit
 
 class AttributedStringViewController: UIViewController {
-    
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var label: UILabel!
     
@@ -132,7 +131,7 @@ extension AttributedStringViewController: UITextViewDelegate {
                       let endIndex = textView.text.index(strIndex, offsetBy: location+length-1, limitedBy: textView.text.endIndex) else {
                 return
             }
-            
+            AttributedStringSingleton.shared.getSelectedString()
 //            選択したテキスト
 //            String(textView.text[startIndex...endIndex])
 //            selectedString.text = String(textView.text[startIndex...endIndex])
