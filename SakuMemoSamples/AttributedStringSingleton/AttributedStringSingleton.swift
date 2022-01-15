@@ -15,6 +15,7 @@ final public class AttributedStringSingleton {
     private var selectedStringInTextView: NSMutableAttributedString?
     private var selectedRangeFirstIndex: String.Index?
     private var selectedRangeLastIndex: String.Index?
+    private var selectedFontsize: CGFloat?
     
     public func setString(text: NSMutableAttributedString) {
         serialQueue.sync {
@@ -29,6 +30,12 @@ final public class AttributedStringSingleton {
         }
     }
     
+    public func setFontsize(fontsize: CGFloat) {
+        serialQueue.sync {
+            selectedFontsize = fontsize
+        }
+    }
+    
     func setDelegate(delegate: MyTextViewDelegate?) {
         self.delegate = delegate
     }
@@ -36,6 +43,12 @@ final public class AttributedStringSingleton {
     public func get() -> NSMutableAttributedString {
         serialQueue.sync {
             selectedStringInTextView!
+        }
+    }
+    
+    public func getFontsize() -> CGFloat {
+        serialQueue.sync {
+            selectedFontsize!
         }
     }
 

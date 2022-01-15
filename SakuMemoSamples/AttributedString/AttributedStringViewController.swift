@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FloatingPanel
 
 protocol MyTextViewDelegate {
     func setStringToTextView(string: NSMutableAttributedString)
@@ -16,7 +17,7 @@ class AttributedStringViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     
     private var bool: Bool = false
-    
+    private var fpc = FloatingPanelController()
     private var stringAttributes: [NSAttributedString.Key : Any] = [:]
     
     override func viewDidLoad() {
@@ -50,10 +51,12 @@ class AttributedStringViewController: UIViewController {
         textView.font = stm.build() */
         
         ///方法３
-        let stm = SymbolicTraitsModifer(font: textView.font!).bold()
-        let string = NSMutableAttributedString(string: textView.text)
-        string.addAttribute(.font, value: stm.build(), range: .init(location: 0, length: textView.text.count))
-        textView.attributedText = string
+//        let stm = SymbolicTraitsModifer(font: textView.font!).bold()
+//        let string = NSMutableAttributedString(string: textView.text)
+//        string.addAttribute(.font, value: stm.build(), range: .init(location: 0, length: textView.text.count))
+//        textView.attributedText = string
+        guard let destinationVC = self.storyboard?.instantiateViewController(withIdentifier: "fpc") as? FloatingPanelViewController else { return }
+        self.presentFloatingPanel(nextVC: destinationVC)
     }
     
     
@@ -69,10 +72,6 @@ class AttributedStringViewController: UIViewController {
 //        let string = NSMutableAttributedString(string: textView.text)
 //        let stm = SymbolicTraitsModifer(font: textView.font!).italic()
 //        string.addAttribute(.font, value: stm.build(), range: .init(location: 0, length: textView.text.count))
-        
-        print(        textView.attributedText.enumerateAttribute(.font, in: NSRange(location: 1, length: 4)) { result, resultRange, _ in
-            print(result)
-            print(resultRange)})
     }
     
     @IBAction func underlineButton(_ sender: UIButton) {
@@ -97,35 +96,26 @@ class AttributedStringViewController: UIViewController {
         let currentLine = allText.substring(with: allText.lineRange(for: textView.selectedRange))
         return currentLine
     }
+    
+    /// sheetPresentationControllerでハーフモーダルを表示
+    func presentSheetPresentationController(destinationVC: UIViewController) {
+        let halfModalViewController = destinationVC
+        if let halfModalVC = halfModalViewController.sheetPresentationController {
+            halfModalVC.detents = [.medium(), .large()]
+            halfModalVC.prefersScrollingExpandsWhenScrolledToEdge = false
+            halfModalVC.prefersGrabberVisible = true
+            halfModalVC.preferredCornerRadius = 12.0
+            halfModalVC.largestUndimmedDetentIdentifier = .medium
+        }
+    }
+    
+    /// FloatingPanelでハーフモーダルを表示
+    func presentFloatingPanel(nextVC: UIViewController) {
+        fpc.set(contentViewController: nextVC)
+        fpc.move(to: .half, animated: true, completion: nil)
+        fpc.addPanel(toParent: self)
+    }
 }
-
-//final class SymbolicTraitsModifer {
-//    private let font: UIFont
-//    private var traits: UIFontDescriptor.SymbolicTraits = []
-//
-//    init(font: UIFont) {
-//        self.font = font
-//        traits = font.fontDescriptor.symbolicTraits
-//    }
-//
-//    func bold() -> SymbolicTraitsModifer {
-//        traits.insert(.traitBold)
-//        return self
-//    }
-//
-//    func italic() -> SymbolicTraitsModifer {
-//        traits.insert(.traitItalic)
-//        return self
-//    }
-//
-//    func build() -> UIFont {
-//        if let descriptor = font.fontDescriptor.withSymbolicTraits(traits) {
-//            return UIFont(descriptor: descriptor, size: font.pointSize)
-//        } else {
-//            return font
-//        }
-//    }
-//}
 
 extension AttributedStringViewController: UITextViewDelegate {
     func textViewDidChangeSelection(_ textView: UITextView) {
@@ -141,6 +131,9 @@ extension AttributedStringViewController: UITextViewDelegate {
             }
             let attributeString = textView.attributedText!
             AttributedStringSingleton.shared.setString(text: NSMutableAttributedString(attributedString: attributeString))
+            let fontsizeOfAttributeString = AttributedStringSingleton.shared.get().attribute(.font, at: 0, effectiveRange: nil) as! UIFont
+            AttributedStringSingleton.shared.setString(text: NSMutableAttributedString(attributedString: attributeString))
+            AttributedStringSingleton.shared.setFontsize(fontsize: fontsizeOfAttributeString.pointSize)
             AttributedStringSingleton.shared.setIndex(firstIndex: startIndex, LastIndex: endIndex)
         }
     }
