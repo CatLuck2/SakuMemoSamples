@@ -135,6 +135,7 @@ extension AttributedStringViewController: UITextViewDelegate {
             AttributedStringSingleton.shared.setString(text: NSMutableAttributedString(attributedString: attributeString))
             AttributedStringSingleton.shared.setFontsize(fontsize: fontsizeOfAttributeString.pointSize)
             AttributedStringSingleton.shared.setIndex(firstIndex: startIndex, LastIndex: endIndex)
+            AttributedStringSingleton.shared.selectedRange = textView.selectedRange
         }
     }
 }

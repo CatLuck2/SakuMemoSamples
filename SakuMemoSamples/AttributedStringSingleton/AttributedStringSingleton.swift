@@ -16,6 +16,7 @@ final public class AttributedStringSingleton {
     private var selectedRangeFirstIndex: String.Index?
     private var selectedRangeLastIndex: String.Index?
     private var selectedFontsize: CGFloat?
+    var selectedRange: NSRange?
     
     public func setString(text: NSMutableAttributedString) {
         serialQueue.sync {
@@ -43,6 +44,18 @@ final public class AttributedStringSingleton {
     public func get() -> NSMutableAttributedString {
         serialQueue.sync {
             selectedStringInTextView!
+        }
+    }
+    
+    public func getStartIndex() -> String.Index {
+        serialQueue.sync {
+            selectedRangeFirstIndex!
+        }
+    }
+    
+    public func getLastIndex() -> String.Index {
+        serialQueue.sync {
+            selectedRangeLastIndex!
         }
     }
     
