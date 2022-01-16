@@ -132,9 +132,7 @@ extension AttributedStringViewController: UITextViewDelegate {
             let attributeString = textView.attributedText!
             AttributedStringSingleton.shared.setString(text: NSMutableAttributedString(attributedString: attributeString))
             let fontsizeOfAttributeString = AttributedStringSingleton.shared.get().attribute(.font, at: 0, effectiveRange: nil) as! UIFont
-            AttributedStringSingleton.shared.setString(text: NSMutableAttributedString(attributedString: attributeString))
             AttributedStringSingleton.shared.setFontsize(fontsize: fontsizeOfAttributeString.pointSize)
-            AttributedStringSingleton.shared.setIndex(firstIndex: startIndex, LastIndex: endIndex)
             AttributedStringSingleton.shared.selectedRange = textView.selectedRange
         }
     }

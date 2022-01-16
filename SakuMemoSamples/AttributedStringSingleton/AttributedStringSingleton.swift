@@ -13,8 +13,6 @@ final public class AttributedStringSingleton {
     public static let shared = AttributedStringSingleton()
     private let serialQueue = DispatchQueue(label: "serial")
     private var selectedStringInTextView: NSMutableAttributedString?
-    private var selectedRangeFirstIndex: String.Index?
-    private var selectedRangeLastIndex: String.Index?
     private var selectedFontsize: CGFloat?
     var selectedRange: NSRange?
     
@@ -23,17 +21,15 @@ final public class AttributedStringSingleton {
             selectedStringInTextView = text
         }
     }
-    
-    public func setIndex(firstIndex: String.Index, LastIndex: String.Index) {
-        serialQueue.sync {
-            selectedRangeFirstIndex = firstIndex
-            selectedRangeLastIndex = LastIndex
-        }
-    }
-    
     public func setFontsize(fontsize: CGFloat) {
         serialQueue.sync {
             selectedFontsize = fontsize
+        }
+    }
+    
+    public func getRange(range: NSRange) {
+        serialQueue.sync {
+            selectedRange = range
         }
     }
     
@@ -47,21 +43,15 @@ final public class AttributedStringSingleton {
         }
     }
     
-    public func getStartIndex() -> String.Index {
-        serialQueue.sync {
-            selectedRangeFirstIndex!
-        }
-    }
-    
-    public func getLastIndex() -> String.Index {
-        serialQueue.sync {
-            selectedRangeLastIndex!
-        }
-    }
-    
     public func getFontsize() -> CGFloat {
         serialQueue.sync {
             selectedFontsize!
+        }
+    }
+    
+    public func getRange() -> NSRange {
+        serialQueue.sync {
+            selectedRange!
         }
     }
 
